@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © All rights reserved.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="customer_account"/>
+    <body>
+        <referenceBlock name="page.main.title">
+            <action method="setPageTitle">
+                <argument translate="true" name="title" xsi:type="string">Customer Status Title</argument>
+            </action>
+        </referenceBlock>
+        <referenceContainer name="content">
+            <block class="Zaproo\CustomerStatus\Block\Form\Status" name="customer_status" template="Zaproo_CustomerStatus::form/edit.phtml" cacheable="false" />
+        </referenceContainer>
+    </body>
+</page>

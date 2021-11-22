@@ -1,0 +1,24 @@
+{
+    "name": "olegattila/customer-status",
+    "description": "Customer Status",
+    "type": "magento2-module",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Oleg Attila",
+            "email": "olegattila@gmail.com"
+        }
+    ],
+    "version": "1.0.1",
+    "require": {
+        "magento/module-customer": "103.0.*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Zaproo\\CustomerStatus\\": ""
+        }
+    }
+}

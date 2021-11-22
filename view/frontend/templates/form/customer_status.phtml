@@ -1,0 +1,23 @@
+<?php
+/**
+ * Copyright © All rights reserved.
+ */
+
+/** @var \Zaproo\CustomerStatus\Block\Widget\Status $block */
+$customerStatusValue = '';
+$customerStatus = $block->getObject()->getCustomAttribute('customer_status');
+if ($customerStatus !== null) {
+    $customerStatusValue = $block->escapeHtmlAttr($customerStatus->getValue());
+}
+?>
+<div class="field field-name-lastname required">
+    <label class="label" for="<?= $block->escapeHtmlAttr($block->getFieldId('customer_status')) ?>"><?= $block->escapeHtml($block->getStoreLabel('customer_status')) ?></label>
+    <div class="control">
+        <input type="text" id="<?= $block->escapeHtmlAttr($block->getFieldId('customer_status')) ?>"
+               name="<?= $block->escapeHtmlAttr($block->getFieldName('customer_status')) ?>"
+               value="<?= $customerStatusValue ?>"
+               title="<?= $block->escapeHtmlAttr($block->getStoreLabel('customer_status')) ?>"
+               class="input-text <?= $block->escapeHtmlAttr($block->getAttributeValidationClass('customer_status')) ?>" <?= ($block->getAttributeValidationClass('customer_status') == 'required-entry') ? ' data-validate="{required:true}"' : '' ?>>
+    </div>
+</div>
+

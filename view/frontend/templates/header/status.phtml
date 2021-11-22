@@ -1,0 +1,16 @@
+<?php
+/**
+ * Copyright © All rights reserved.
+ */
+
+/**
+ * @var \Magento\Framework\View\Element\Template $block
+ */
+?>
+<li class="customer-status" data-bind="scope: 'customer'">
+    <!-- ko if: customer().fullname  -->
+    <span class="logged-in-customer-status"
+          data-bind="text: customer().customer_status">
+    </span>
+    <!-- /ko -->
+</li>
