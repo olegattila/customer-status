@@ -9,4 +9,8 @@
         <plugin sortOrder="1" name="zaprooCustomerStatusCustomer"
                 type="Zaproo\CustomerStatus\Plugin\CustomerData\Customer"/>
     </type>
+    <type name="Zaproo\CustomerStatus\Controller\Customer\Status">
+        <plugin sortOrder="1" name="zaprooCustomerStatusStatus"
+                type="Zaproo\CustomerStatus\Plugin\Controller\Customer\Status"/>
+    </type>
 </config>
